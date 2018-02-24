@@ -40,6 +40,10 @@ body{
     margin-left:0;
     margin-right: 0;
   }
+  .container-fluid{
+    padding-left: 0;
+    padding-right:0;
+  }
   .nav a {
       color: #cccccc;
   }
@@ -48,7 +52,7 @@ body{
     background-color: #4aaaa5;
     margin-top:0;
     margin-bottom:0;
-    padding-left:15px;
+    padding-left:20px;
     padding-right: 20px;
     padding-top:20px;
     height: 75px;
@@ -98,8 +102,29 @@ body{
     padding-top:4%;
     padding-bottom: 2%;
     margin-bottom:0;
+    margin-top: 0px;
     font-weight: bold;
   }
+  .sidebox{
+    background-color: #ffffff;
+    padding: 0px;
+    padding-top:0;
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 240px;
+    }
+  .h2-side{
+    font-size: 22px;
+    color: #4aaaa5;
+    padding-left:10%;
+    padding-right:10%;
+    padding-top:10%;
+    padding-bottom: 4%;
+    margin-bottom:0;
+    margin-top: 0px;
+    font-weight: bold;
+  }
+
   hr{
     margin-top:0;
     margin-bottom:0;
@@ -115,10 +140,30 @@ body{
   .hr-light{
     height: 1px;
     border: 0;
-    border-top: 2px solid #cccccc;    
+    border-top: 2px solid #cccccc;
+    padding-bottom:5%;
+    width: 80%;
   }
+.col-md-3{
+  height: fit-content;
+}
 
-/*Footer*/
+.connect{
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 10%;
+  max-height: 82px;
+}
+.connect img{
+  display: inline-block;
+  width: 29%;
+}
+.connect-icon:nth-child(even){
+  margin-left:4.1%;
+  margin-right:4.1%;
+}
+  /*Footer*/
 
 /*About*/
   .profilepic {
@@ -149,4 +194,15 @@ body{
 
 @media (min-width: 768){
   width: 960px;
+}
+
+@media (max-width:575.98px){
+  .sidebox{
+    width: 575.98px;
+    display: inline-block;
+    float: none;
+  }
+  .hr-light{
+    display: none;
+  }
 }
