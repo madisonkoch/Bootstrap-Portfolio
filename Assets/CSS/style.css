@@ -3,7 +3,6 @@
 
   h1,h2,h3{font-family:'Georgia', Times, Times New Roman, serif;}
 
-
 /*Body*/
   .container{
     padding:0px;
@@ -11,10 +10,9 @@
     margin-left:0px;
     width: 100%;
   }
-body{
-  background-image: url(../Images/Background.png);
-
-}  
+  body{
+    background-image: url(../Images/Background.png);
+  }
 /*Header*/
   .row{
     margin:0px;
@@ -34,8 +32,8 @@ body{
     margin-left: auto;
     margin-right: auto;
   }
-  .container-fluid>.navbar-collapse,
-  .container>.navbar-header{
+  .container-fluid,.navbar-collapse,
+  .container,.navbar-header{
     padding-left: 0;
     padding-right: 0;
     margin-left:0;
@@ -45,8 +43,12 @@ body{
     padding-left: 0;
     padding-right:0;
   }
+  .container-fluid>.navbar-header{
+    margin:0;
+  }
   .nav a {
       color: #cccccc;
+
   }
   .navbar-header{
     color: #ffffff;
@@ -64,23 +66,26 @@ body{
     margin-right: 0px;
     margin-top:0px;
   }
-  .pagelink{
-    font-size: 20px;
-  }
-.navbar-nav>li>a {
-    padding-top:0;
-    padding-bottom:0;
-    margin-top:15px;
-    margin-bottom:15px;
-  }
-  .pagelink:link,
-  .pagelink:hover{
-    color:#cccccc;
-  }
-  .pagelink:hover{
-    
-    color: #4aaaa5;
-  }
+  .navbar-nav>li>a {
+      padding-top:0;
+      padding-bottom:0;
+      margin-top:15px;
+      margin-bottom:15px;
+      font-size: 18px;
+      padding-left:4px;
+      padding-right:4px;
+    }
+    .navbar-nav{
+      margin: auto 15px
+    }
+    .pagelink:link,
+    .pagelink:hover{
+      color:#cccccc;
+    }
+    .pagelink:hover{
+      
+      color: #4aaaa5;
+    }
   
 /*Main*/
   .contentparent{
@@ -144,26 +149,27 @@ body{
     padding-bottom:5%;
     width: 80%;
   }
-.col-md-3{
-  height: fit-content;
-}
+  .col-md-3{
+    height: fit-content;
+  }
 
-.connect{
-  width:80%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-bottom: 10%;
-  max-height: 82px;
-}
-.connect img{
-  display: inline-block;
-  width: 31%;
-}
-.connect-icon:nth-child(even){
-  margin-left:auto;
-  margin-right:auto;
-}
-  /*Footer*/
+  .connect{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 5%;
+    padding-bottom:5%;
+    max-height: fit-content;
+  }
+  .connect img{
+    display: inline-block;
+    width: 31%;
+  }
+  .connect-icon:nth-child(even){
+    margin-left:auto;
+    margin-right:auto;
+  }
+/*Footer*/
   footer{
     text-align: center;
     width:100%;
@@ -209,6 +215,85 @@ body{
       color: #666666;
       text-shadow: 0px 0px 8px #4aaaa5;
   }
+/*Portfolio*/
+  .subcontainer{
+    position:relative;
+    width:100%;
+  }
+  .port-img{
+    width:100%;
+    padding:5%
+  }
+  .img-text{
+    position: absolute;
+    bottom: 5%;
+    background-color: #4aaaa5;
+    color: white;
+    width:90%;
+    text-align: center;
+    height: fit-content;
+    margin-left:5%;
+    margin-bottom:5%;
+  }
+  h3{
+    font-size:18px;
+    margin-top:5%;
+    margin-bottom: 5%;
+    margin-left:5%;
+    margin-right:5%;
+  }
+  .col-md-12{
+    padding-bottom:5%;
+  }
+/*Contact*/
+  form input,
+  form textarea{
+      display: block;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      width: 100%;
+  }
+  textarea{
+      height: 200px;
+      padding-left: 10px;
+      padding-top: 10px;
+  }
+  input{
+      height: 30px;
+      padding-left: 10px;
+  }
+  label{
+      font-size: 18px;
+      color: #666666;
+  }
+  .submit{
+      width: 25%;
+      height: 40px;
+      background-color: #4aaaa5;
+      color: white;
+      border: none;
+      font-size: 18px;
+  }
+/*FLEX*/
+  .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }  
+  .flex-content{
+    flex: 1 0 auto;
+  }
+
+  .flex-footer{
+    flex-shrink:0;
+  }
+  html{
+    height:100%;
+    width: 100%;
+  }
+
+/*Media Queries*/
   @media (max-width:1035px) and (min-width:768px){
     .h2-side{
       font-size: 15px;
@@ -222,5 +307,29 @@ body{
   @media (min-width:1450px){
     .h2-side{
       font-size:22px;
+    }
+  }
+  @media (max-width: 720px){
+    .navbar,
+    .contentparent,
+    .sidebox{
+      max-width: 100%;
+    }
+    .pull-right{
+      float:none!important;
+    }
+    .social{
+      max-width:120px;
+    }
+    .contentbox{
+      margin-top:5%;
+    }
+  }
+  @media (max-width:780px) and (min-width:720px){
+    .sidebox{
+      margin-right:13%;
+    }
+    .contentbox{
+      margin-top:5%;
     }
   }
